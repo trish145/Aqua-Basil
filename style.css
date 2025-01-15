@@ -1,0 +1,475 @@
+:root {
+  /* Colour */
+  --colour-black: #2b292d;
+  --colour-grey: #7b7b7e;
+  --colour-grey-light: #f4f5f7;
+  --colour-blue-light: #f2f8fa;
+
+  --colour-primary: #3040c4;
+  --colour-green: #009b4d;
+  --colour-blue: #0189d1;
+
+  /* Margin */
+  --margin-xs: 8px;
+  --margin-sm: 16px;
+  --margin-md: 24px;
+  --margin-ml: 32px;
+  --margin-lg: 40px;
+  --margin-xl: 48px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input,
+button {
+  border: none;
+  outline: none;
+  font-family: 'DM Sans', sans-serif;
+}
+
+li {
+  list-style-type: none;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: var(--colour-black);
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+section {
+  padding: 80px 0;
+}
+
+/* ====== Heading Style ====== */
+.heading-2 {
+  margin-bottom: var(--margin-md);
+  font-size: 34px;
+  line-height: 1.0588235294;
+  letter-spacing: -0.03em;
+}
+
+.heading-3 {
+  margin-bottom: var(--margin-sm);
+  font-size: 22px;
+  line-height: 1.3636363636;
+  letter-spacing: -0.04em;
+}
+
+.section-category {
+  display: block;
+  margin-bottom: var(--margin-xs);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+/* ====== Button Style ====== */
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  height: 48px;
+  padding: 16px;
+  border-radius: 2px;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: -0.05em;
+  color: #fff;
+  cursor: pointer;
+  background-color: var(--colour-primary);
+  transition: background-color 0.25s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #6773da;
+}
+
+.inverted {
+  color: var(--colour-primary);
+  background-color: #fff;
+}
+
+.inverted:hover {
+  color: #fff;
+  background-color: var(--colour-primary);
+}
+
+.btn-wrapper .btn:first-child {
+  margin-right: var(--margin-xs);
+}
+
+/* ====== Hero ====== */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  background-color: #fdded8;
+}
+
+.hero-title {
+  margin-bottom: var(--margin-md);
+  font-size: 40px;
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.hero p {
+  margin-bottom: var(--margin-md);
+}
+
+/* ====== Service Section ====== */
+.section-service {
+  background-color: var(--colour-grey-light);
+}
+
+.section-service .col-12:first-child {
+  margin-bottom: var(--margin-lg);
+}
+
+/* ====== Program Section ====== */
+.section-program .section-category {
+  color: var(--colour-green);
+}
+
+.section-program .row:first-child {
+  margin-bottom: var(--margin-ml);
+}
+
+.program-card {
+  display: block;
+  padding: 24px 0 32px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: all 0.25s ease-in-out;
+}
+
+/* Except for the last program card */
+.section-program .col-md-4:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.program-card:hover {
+  transform: translateY(-4px);
+  background-color: #3141c5;
+  box-shadow: 0 11px 55px rgba(0, 0, 0, 0.07), 0 13px 18px rgba(0, 0, 0, 0.15);
+}
+
+.program-card:hover h3 {
+  color: #fff;
+}
+
+.program-card img {
+  display: block;
+  width: auto;
+  height: 195px;
+  margin: 0 auto var(--margin-sm);
+}
+
+.program-card h3 {
+  font-size: 18px;
+  line-height: 1.3333333333;
+  letter-spacing: -0.02em;
+  transition: color 0.4s ease-in-out;
+}
+
+/* ====== Curriculum Section ====== */
+.section-curriculum .section-category {
+  color: var(--colour-blue);
+}
+
+.section-curriculum .row:first-child {
+  margin-bottom: var(--margin-xl);
+}
+
+.curriculum-desc {
+  margin-bottom: var(--margin-ml);
+}
+
+.curriculum-image {
+  display: none;
+}
+
+/* First curriculum detail description */
+.section-curriculum .row:last-child .col-12:first-child {
+  margin-bottom: var(--margin-lg);
+}
+
+/* ====== Subscription Section ====== */
+.section-subscription {
+  padding: 40px 0;
+  text-align: center;
+  background-color: var(--colour-blue-light);
+}
+
+.subscription-image {
+  padding: 25px 0;
+  margin-bottom: var(--margin-sm);
+}
+
+.subscription-image img {
+  display: block;
+  width: auto;
+  height: 190px;
+  margin: 0 auto;
+}
+
+.subscription-title {
+  margin-bottom: var(--margin-sm);
+  font-size: 32px;
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.subscription-desc {
+  margin-bottom: var(--margin-md);
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 2px;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--colour-grey);
+}
+
+.form-group button {
+  width: 100%;
+  margin: var(--margin-xs) 0;
+}
+
+.subscription-misc {
+  font-size: 13px;
+  line-height: 1.5384615385;
+  color: var(--colour-grey);
+}
+
+.subscription-misc a {
+  color: var(--colour-primary);
+  text-decoration: underline;
+}
+
+/* ====== Footer ====== */
+.footer-links {
+  padding: 24px 0;
+}
+
+.footer-links li:not(:last-child) {
+  margin-bottom: var(--margin-xs);
+}
+
+.footer-links a {
+  font-size: 14px;
+  line-height: 1.7142857143;
+  color: var(--colour-grey);
+}
+
+/* ====== >= 768px ====== */
+@media screen and (min-width: 768px) {
+  p {
+    font-size: 22px;
+    line-height: 1.4545454545;
+  }
+
+  /* ====== Utilities ====== */
+  .heading-2 {
+    margin-bottom: var(--margin-ml);
+    font-size: 56px;
+    line-height: 1;
+  }
+
+  .heading-3 {
+    margin-bottom: var(--margin-sm);
+    font-size: 26px;
+    line-height: 1.3076923077;
+  }
+
+  .section-category {
+    margin-bottom: var(--margin-sm);
+    font-size: 22px;
+    line-height: 1.0909090909;
+  }
+
+  .btn {
+    width: 160px;
+    height: 56px;
+    padding: 0 12px;
+    font-size: 18px;
+    line-height: 1.5555555556;
+    letter-spacing: -0.05em;
+  }
+
+  .btn-wrapper .btn:first-child {
+    margin-right: calc(var(--margin-xs) * 2);
+  }
+
+  /* ====== Hero ====== */
+  .hero {
+    height: auto;
+    padding: 120px 0;
+  }
+
+  .hero-title {
+    font-size: 70px;
+    line-height: 1.0285714286;
+  }
+
+  .hero p {
+    margin: var(--margin-ml) 0;
+  }
+
+  /* ====== Service Section ====== */
+  .section-service .col-12:first-child {
+    margin-bottom: 0;
+  }
+
+  /* ====== Program Section ====== */
+  .section-program {
+    padding: 80px 0 96px;
+    text-align: center;
+  }
+
+  .section-program .row:first-child {
+    margin-bottom: 72px;
+  }
+
+  /* Except for the last program card */
+  .section-program .col-md-4:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .program-card img {
+    margin-bottom: var(--margin-md);
+  }
+
+  .program-card h3 {
+    font-size: 20px;
+    line-height: 1.2;
+  }
+
+  /* ====== Curriculum Section ====== */
+  .section-curriculum {
+    padding: 80px 0 96px;
+  }
+
+  .section-curriculum .row:first-child {
+    margin-bottom: 24px;
+  }
+
+  .curriculum-desc {
+    margin-bottom: 72px;
+  }
+
+  .curriculum-image {
+    display: block;
+  }
+
+  .curriculum-image img {
+    display: block;
+    width: 100%;
+    max-width: 425px;
+    height: auto;
+  }
+
+  /* First curriculum detail description */
+  .section-curriculum .row:last-child .col-12:first-child {
+    margin-bottom: 0;
+  }
+
+  .curriculum-detail-desc {
+    font-size: 18px;
+    line-height: 1.4444444444;
+  }
+
+  /* ====== Subscription Section ====== */
+  .section-subscription {
+    padding: 80px 0;
+    text-align: left;
+  }
+
+  .subscription-title {
+    font-size: 40px;
+  }
+
+  .subscription-image {
+    padding: 8px 0;
+    margin-bottom: 0;
+  }
+
+  .subscription-image img {
+    margin-left: 0;
+    height: 285px;
+  }
+
+  .form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+  }
+
+  .form-group input {
+    padding: 16px;
+    margin-right: var(--margin-xs);
+    font-size: 18px;
+    line-height: 1.3333333333;
+  }
+
+  .form-group button {
+    flex: 0 0 160px;
+    margin: 0;
+  }
+
+  .subscription-misc {
+    font-size: 14px;
+    line-height: 1.7142857143;
+  }
+  /* ====== Footer ====== */
+  .footer-links {
+    display: flex;
+    padding: 16px 0;
+  }
+
+  .footer-links li:not(:last-child) {
+    margin-bottom: 0;
+  }
+
+  .footer-links a {
+    margin-right: 16px;
+  }
+}
+
+/* Custom Grid System - Fix container width */
+@media only screen and (min-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+}
